@@ -1,2 +1,7 @@
 1. 온프레미스 ( On-premise)
   > 기업의 서버를 클라우드 같은 원격 환경에서 운영하는 방식이 아닌, 자체적으로 보유한 전산실 서버에 직접 설치 및 운영하는 방식
+
+2. SpEL ( Spring Expression Language ) 
+  > The Spring Expression Language (SpEL for short) is a powerful expression language that supports querying and manipulating an object graph at runtime.
+  > SpEL 은 Runtime 시에 객체 그래프를 쿼리 및 조작을 지원해주는 강력한 expression 언어이다
+  > 참고) https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html
