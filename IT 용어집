@@ -5,3 +5,7 @@
   > The Spring Expression Language (SpEL for short) is a powerful expression language that supports querying and manipulating an object graph at runtime.
   > SpEL 은 Runtime 시에 객체 그래프를 쿼리 및 조작을 지원해주는 강력한 expression 언어이다
   > 참고) https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html
+  
+3. 멱등성 ( Idempotent )
+  > 연산(HTTP 호출)을 여러 번 적용하더라도 결과가 달라지지 않는 성질, 연산을 여러 번 반복하여도 한 번만 수행된 것과 같은 성질
+  > REST API 설계 시에 특히나 중요하다.
