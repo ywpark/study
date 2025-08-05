@@ -46,15 +46,12 @@ Hirbernate Architecture 이미지
 
 ---
 
-<aside>
-💡 JPQL query 또는 Criteria query 는 AST ( Abstract Syntax Tree ) 로 파싱이 된다. 이때 Hibernate 에서는 쿼리 컴파일 시간이 걸리기 때문에 QueryPlanCache 를 제공한다.
-
-Native query 의 경우에는 매개변수 및 쿼리 반환 유형에 대한 정보가 ParameterMetadata
-에 저장된다.
-
-모든 쿼리는 Hibernate 의 Plan Cache 를 확인하고, 없다면 Plan 을 캐시에 저장한다.
-
-</aside>
+> 💡 JPQL query 또는 Criteria query 는 AST ( Abstract Syntax Tree ) 로 파싱이 된다. 이때 Hibernate 에서는 <br>
+>    쿼리 컴파일 시간이 걸리기 때문에 > QueryPlanCache 를 제공한다. 
+> 
+> Native query 의 경우에는 매개변수 및 쿼리 반환 유형에 대한 정보가 ParameterMetadata 에 저장된다.
+> 
+> 모든 쿼리는 Hibernate 의 Plan Cache 를 확인하고, 없다면 Plan 을 캐시에 저장한다. 
 
 > **query compilation takes time : 쿼리 컴파일 시간이 걸린다.**
 > 
@@ -129,33 +126,30 @@ java -XX:+PrintFlagsFinal -version | grep -iE 'heapsize|metaspace|threadstacksiz
 > 위에서 보면 MaxHeapSize 는 대략 480MB 로 볼 수 있다.
 > 
 
-<aside>
-💡 따로 JAVA 실행 시 HeapSize 를 정의하지 않으면 Default 값으로 잡히는데 이 부분은 대략적으로 아래와 같은 기준에 의해서 잡힌다. 
-( OS 환경에 따라 다르기에 정확한 값이 아닌 추정치 데이터로 활용 )
 
-Initial heap size of 1/64 of physical memory up to 1Gbyte
-Maximum heap size of 1/4 of physical memory up to 1Gbyte
+> 💡 따로 JAVA 실행 시 HeapSize 를 정의하지 않으면 Default 값으로 잡히는데 이 부분은 대략적으로 <br>
+>   아래와 같은 기준에 의해서 잡힌다. <br>
+> ( OS 환경에 따라 다르기에 정확한 값이 아닌 추정치 데이터로 활용 ) <br>
+>
+> Initial heap size of 1/64 of physical memory up to 1Gbyte<br>
+> Maximum heap size of 1/4 of physical memory up to 1Gbyte<br>
+> 
+> EX) PC 메모리가 2GB 라고 한다면 아래와 같이 나온다.<br>
+> Initial heap : 2 * 1024 / 64 = 32MB<br>
+> Maximum heap : 2 * 1024 / 4 = 512MB<br>
 
-EX) PC 메모리가 2GB 라고 한다면 아래와 같이 나온다.
-Initial heap : 2 * 1024 / 64 = 32MB
-Maximum heap : 2 * 1024 / 4 = 512MB
-
-</aside>
 
 - Hibernate 옵션 수치
 
-<aside>
-💡 해당 옵션은 정확한 계산 측정 방법은 없으며, 아래 계산 된 숫자는 개수를 의미한다.
-메모리 용량은 별도로 측정해야 한다.
-
-아래 지정한 숫자는 아래 예시 기준으로 default 수치를 계산함.
-( HQLQueryPlan object occupies approximately 3MB )
-
-Heap Max Size : 4GB
-plan_cache_max_size : 1024 
-plan_parameter_metadata_max_size : 64
-
-</aside>
+> 💡 해당 옵션은 정확한 계산 측정 방법은 없으며, 아래 계산 된 숫자는 개수를 의미한다. <br>
+>    메모리 용량은 별도로 측정해야 한다.<br>
+> 
+> 아래 지정한 숫자는 아래 예시 기준으로 default 수치를 계산함.<br>
+> ( HQLQueryPlan object occupies approximately 3MB ) <br>
+> 
+> Heap Max Size : 4GB<br>
+> plan_cache_max_size : 1024 <br>
+> plan_parameter_metadata_max_size : 64<br>
 
 > plan_cache_max_size
 > 
@@ -186,7 +180,7 @@ in_clause_parameter_padding = true
 
 ```yaml
 spring:
-	jpa:
+  jpa:
     properties:
       hibernate:
         query:
