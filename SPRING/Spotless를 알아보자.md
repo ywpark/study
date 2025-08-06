@@ -84,7 +84,7 @@ spotless {
     )
     
     // 사용하지 않는 import 삭제
-		removeUnusedImports()
+    removeUnusedImports()
     
     // 구글 Java 코드 스타일을 따른다
     // 별도로 java-google-style.xml 파일을 등록 안해도 된다.
