@@ -337,7 +337,7 @@ COPY_PATH="/usr/share/nginx/html/mro"
 HTML_FILE_NAME="html_maintenance.html"
 JSON_FILE_NAME="json_maintenance.json"
 
-ALLOWED_NAMES=("user" "api" "webpos")
+ALLOWED_NAMES=("user" "api" "web")
 
 usage() {
   echo "Usage: $0 <function> [options]"
@@ -347,7 +347,7 @@ usage() {
   echo "  end             서비스점검 종료하는 함수"
   echo ""
   echo "Options for start:"
-  echo "  -n <name>       서비스 점검 페이지 적용할 서비스( user : 상품권몰 사용자, api : API 서버, webpos : WebPOS 서버 )"
+  echo "  -n <name>       서비스 점검 페이지 적용할 서비스( user : 사용자 서버, api : API 서버, web : Web 서버 )"
   echo "  -s <start_date> 서비스 점검 시작일 ( YYYY-MM-dd HH:mm 형식)"
   echo "  -e <end_date>   서비스 점검 종료일 ( YYYY-MM-dd HH:mm 형식)"
   echo "  --help          사용법 및 옵션 확인"
@@ -460,7 +460,7 @@ Functions:
   end             서비스점검 종료하는 함수
 
 Options for start:
-  -n <name>       서비스 점검 페이지 적용할 서비스( user : 상품권몰 사용자, api : API 서버, webpos : WebPOS 서버 )
+  -n <name>       서비스 점검 페이지 적용할 서비스( user : 사용자 서버, api : API 서버, web : Web 서버 )
   -s <start_date> 서비스 점검 시작일 ( YYYY-MM-dd HH:mm 형식)
   -e <end_date>   서비스 점검 종료일 ( YYYY-MM-dd HH:mm 형식)
   --help          사용법 및 옵션 확인
