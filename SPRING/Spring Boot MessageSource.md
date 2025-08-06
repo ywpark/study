@@ -1,13 +1,10 @@
 # Spring Boot MessageSource 이슈
 
-<aside>
-💡 Linux 에 프로젝트 배포 후에 message.properties에 정의한 코드값을 가져오지 못하는 
-상황 발생
-
-Windows 에서 build 테스트를 해보면 정상
-Linux 에서 build 테스트를 해보면 코드 값을 가져오지 못하는 상황
-
-</aside>
+> 💡 Linux 에 프로젝트 배포 후에 message.properties에 정의한 코드값을 가져오지 못하는 
+> 상황 발생
+> 
+> Windows 에서 build 테스트를 해보면 정상 <br>
+> Linux 에서 build 테스트를 해보면 코드 값을 가져오지 못하는 상황
 
 - 시스템 환경
     - Spring Boot 2.6.7

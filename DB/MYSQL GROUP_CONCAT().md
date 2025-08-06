@@ -1,17 +1,13 @@
 # MYSQL GROUP_CONCAT() 이슈
 
-<aside>
-💡 mysql 쿼리에서 group_concat() 사용하는 경우에 발생했던 오류를 공유하고자 한다
-
-</aside>
+> 💡 mysql 쿼리에서 group_concat() 사용하는 경우에 발생했던 오류를 공유하고자 한다
+> 
 
 ## 1. 발생 현상
 
-<aside>
-💡 쿼리에서 `GROUP_CONCAT`() 함수를 사용하여 데이터를 변환하는데 특정 길이 이후에는
-cut off(짤림) 현상이 되는 것을 발견하였다.
 
-</aside>
+> 💡 쿼리에서 `GROUP_CONCAT`() 함수를 사용하여 데이터를 변환하는데 특정 길이 이후에는 <br>
+> cut off(짤림) 현상이 되는 것을 발견하였다.
 
 ## 2. 원인
 
