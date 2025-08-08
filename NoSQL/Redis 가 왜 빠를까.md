@@ -100,14 +100,10 @@
 
 ---
 
-<aside>
-💡
-
-I/O 작업 이란 ?
- : user space(User Mode) 에서 직접 수행할 수 없기 때문에 user process 가 
-  kernel(Kernel Mode) 에 시스템 콜을 하여 하드웨어 장치와 통신.
-
-</aside>
+> 💡I/O 작업 이란 ?
+>  : user space(User Mode) 에서 직접 수행할 수 없기 때문에 user process 가 
+>   kernel(Kernel Mode) 에 시스템 콜을 하여 하드웨어 장치와 통신.
+> 
 
 ### 1. Synchronous/Asynchronous
 
