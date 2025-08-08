@@ -37,10 +37,10 @@ spring:
 
 spring:
   datasource: 
-	  url: ***
-	  driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-	  username: ***
-	  password: ***
+    url: ***
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    username: ***
+    password: ***
 
 #build.gradle
 
@@ -121,16 +121,9 @@ Consider the following:
     - `spring.datasource.url` : SpringBoot 에서 지원하는 `Connection Pool` 모두 적용되는 URL
     - `spring.datasource.hikari.jdbc-url` : HikariCP 만 적용 할 URL
     - SpringBoot 문서에 보면 아래 문구가 나온다
-        
-        <aside>
-        💡 You should at least specify the URL by setting the `spring.datasource.url` property. Otherwise, Spring Boot tries to auto-configure an embedded database.
-        
-        </aside>
-        
-        > [SpringBoot DataSource Configuration 설명](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.sql.datasource.configuration)
-        > 
-        
-        즉, SpringBoot 는 `spring.datasource.url` 값을 정의하지 않으면 `Embedded Database` 의 자동 구성을 시도한다.
+        > 💡 You should at least specify the URL by setting the `spring.datasource.url` property. Otherwise, Spring Boot tries to auto-configure an embedded database. <br>
+        > [SpringBoot DataSource Configuration 설명](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.sql.datasource.configuration) <br>
+        > 즉, SpringBoot 는 `spring.datasource.url` 값을 정의하지 않으면 `Embedded Database` 의 자동 구성을 시도한다.
         
 
 ### 3. Embedded Database ??
@@ -143,15 +136,12 @@ Consider the following:
     - build dependency 에 사용하고 싶은 Embedded database 를 추가하면 connection url 을
     설정하지 않아도 된다.
     
-    <aside>
-    💡 It is often convenient to develop applications by using an in-memory embedded database.
-    
-    Spring Boot can auto-configure embedded [H2](https://www.h2database.com/), [HSQL](https://hsqldb.org/), and [Derby](https://db.apache.org/derby/) databases.
-    
-    You need not provide any connection URLs. You need only include a build dependency to the embedded database that you want to use
-    
-    </aside>
-    
+    > 💡 It is often convenient to develop applications by using an in-memory embedded database.
+    > 
+    > Spring Boot can auto-configure embedded [H2](https://www.h2database.com/), [HSQL](https://hsqldb.org/), and >[Derby](https://db.apache.org/derby/) databases.
+    > 
+    > You need not provide any connection URLs. You need only include a build dependency to the embedded database that you want to use
+    > 
     > [SpringBoot Embedded Database 설명](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.sql.datasource.embedded)
     > 
 
@@ -176,12 +166,12 @@ Consider the following:
     ```yaml
     spring:
       datasource: 
-    		url: ***
+        url: ***
         driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
         username: ***
         password: ***
       hikari:
-    	  connectionTimeout: ***
+        connectionTimeout: ***
     ```
     
     > H2 dependency 삭제
@@ -204,12 +194,12 @@ Consider the following:
         ```yaml
         spring:
           datasource: 
-        		url: ***
+            url: ***
             driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
             username: ***
             password: ***
           tomcat:
-        	  max-wait: ***
+            max-wait: ***
         ```
         
         > [SpringBoot 에서 지원하는 ConnectionPool](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.sql.datasource.connection-pool)
