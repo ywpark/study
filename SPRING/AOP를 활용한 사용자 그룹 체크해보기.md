@@ -90,7 +90,7 @@
         @Value("${custom.jwt.access.name}")
         private String accessName;
     
-        @Around("@annotation(com.msit.newsmarket_user.common.auth.annotation.UserGroup)")
+        @Around("@annotation(com.msit.exam.common.auth.annotation.UserGroup)")
         public Object checkUserGroup(ProceedingJoinPoint joinPoint) throws Throwable {
     
             MethodSignature signature = (MethodSignature) joinPoint.getSignature();
